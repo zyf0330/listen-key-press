@@ -54,9 +54,9 @@ int main() {
     KeyCode altKey = XKeysymToKeycode(display, XK_Alt_L);
     KeyCode rKey = XKeysymToKeycode(display, XK_r);
 
-    if(XUngrabKey(display, rKey, ShiftMask | Mod1Mask, root) != 0) {
-      std::cout << "fail to ungrab" << std::endl;
-    }
+    // if(XUngrabKey(display, rKey, ShiftMask | Mod1Mask, root) != 0) {
+      // std::cout << "fail to ungrab" << std::endl;
+    // }
     // Grab the key combination globally
     XGrabKey(display, rKey, ShiftMask | Mod1Mask, root, True, GrabModeAsync, GrabModeAsync);
 
